@@ -1,0 +1,18 @@
+<!-- Display a list of questions -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for question in questions %}
+    <h2>{{ question.title }}</h2>
+    <p>{{ question.content }}</p>
+    <a href="{% url 'question_detail' question.id %}">View Question</a>
+{% endfor %}
+
+    
+</body>
+</html>
